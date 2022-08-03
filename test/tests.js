@@ -55,6 +55,10 @@ describe('NameCase', function () {
     assert.equal('George Washington', nc('george washington'));
     assert.equal('George Washington', nc('gEoRgE wAsHiNgToN'));
   });
+
+  it('should translate to correct address', function () {
+    assert.equal('248 Macedonia Cres', nc('248 Macedonia Cres'));
+  })
 });
 
 
