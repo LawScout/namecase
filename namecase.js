@@ -96,7 +96,8 @@
         .replace(/\bMacKey\b/,      "Mackey")
         .replace(/\bMacKley\b/,     "Mackley")
         .replace(/\bMacHell\b/,     "Machell")
-        .replace(/\bMacHon\b/,      "Machon");
+        .replace(/\bMacHon\b/,      "Machon")
+        .replace(/\bMacEdonia\b/,   "Macedonia");
     }
 
 
