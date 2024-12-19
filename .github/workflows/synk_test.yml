@@ -1,0 +1,30 @@
+# Learn more about the next generation of Helios Pipelines here:
+# https://rbcgithub.fg.rbc.com/pages/rbc-to/a0d0-helios-docs/
+
+name: Snyk Code Scan
+
+# Events that will trigger the workflow. Learn more here:
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  push:
+    branches:
+      - '**' # matches every branch
+  pull_request:
+    branches:
+      - '**' # matches every branch
+  workflow_dispatch:
+
+# Learn more about the supported NodeJS versions here:
+# https://rbcgithub.fg.rbc.com/T1V0/helios-update-language-cache-workflows/blob/main/resources/node.yml
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+
+jobs:
+  snyk_code_scan:
+    name: Snyk Code Scan
+    uses: rbc-to/a0d0-helios-workflows/.github/workflows/snyk_code_scan.yml@v1
